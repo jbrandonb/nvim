@@ -1,19 +1,21 @@
 return {
-  "catppuccin/nvim",
+  "loctvl842/monokai-pro.nvim",
   priority = 1000,
   config = function()
-    require("catppuccin").setup({
-      flavour = "mocha",
+    require("monokai-pro").setup({
       transparent_background = true,
       show_end_of_buffer = true,
       integrations = {
         cmp = true,
-        gitsigns = true,
         treesitter = true,
         nvimtree = true,
       },
+      filter = "pro",
+      background_clear = {
+        "neo-tree"
+      }
     })
-    vim.cmd.colorscheme("catppuccin")
+    vim.cmd.colorscheme("monokai-pro")
   end,
 }
 
